@@ -54,7 +54,7 @@ class Command(RunserverCommand):
         """
         style = color_style()
         verbosity = int(options['verbosity'])
-        host = 'wetty:%s' % options['livereload_port']
+        host = 'localhost:%s' % options['livereload_port']
         try:
             urlopen('http://%s/changed?files=.' % host)
             self.message('LiveReload request emitted.\n',
