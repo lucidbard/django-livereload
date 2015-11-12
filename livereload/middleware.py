@@ -27,7 +27,7 @@ class LiveReloadScript(object):
             return response
 
         script = soup.new_tag(
-            'script', src='https://192.168.1.238:35729/livereload.js')
+            'script', src='http://192.168.1.238:35729/livereload.js')
         soup.head.append(script)
 
         response.content = str(soup)
